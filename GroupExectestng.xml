@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Suite">
+
+
+<groups>
+<run>
+<include name="smoke"></include>
+<exclude name="regression"></exclude>
+</run>
+</groups>
+
+
+  <test thread-count="1" parallel="tests" name="Test">
+
+    <classes>
+      <class name="practisepackage.Test_03"/>
+      <class name="practisepackage.Test_02"/>
+      <class name="practisepackage.Test_01"/>
+      <class name="practisepackage.Test_06"/>
+      <class name="practisepackage.Test_05"/>
+      <class name="practisepackage.Test_04"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
