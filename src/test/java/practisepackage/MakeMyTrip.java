@@ -19,7 +19,7 @@ public class MakeMyTrip {
 	public static void main(String[] args) throws Throwable {
 		ChromeOptions option =new ChromeOptions();
 		option.addArguments("--disable-notifcations");
-		WebDriverManager.chromedriver().create();
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver(option);
 		driver.get("https://www.makemytrip.com/");
 		driver.manage().window().maximize();
