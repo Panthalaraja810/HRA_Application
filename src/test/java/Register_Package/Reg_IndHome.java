@@ -17,7 +17,7 @@ import com.ObjectRepo.RegisterInduvidualHomePage;
 public class Reg_IndHome extends BaseClass
 {
 	
-	@Test
+	@Test()
 	public void regIndHome() throws Throwable
 	{
 	DashBoardPagePage d =new DashBoardPagePage(driver);

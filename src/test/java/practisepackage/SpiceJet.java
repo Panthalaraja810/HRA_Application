@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
 
 import com.GenericUtilities.WebDriverUtility;
@@ -30,18 +31,15 @@ public void test1() throws Throwable
 		
 		driver.get("https://www.spicejet.com/");
 		Thread.sleep(3000);
-	//	WebElement trip = driver.findElement(By.xpath("//div[contains(text(),'Round Trip')]"));
-		//driver.findElement(By.xpath("//div[contains(text(),'Flight Status')]")).click();
-		//driver.findElement(By.partialLinkText("Round Trip")).click();
-		//driver.findElement(By.xpath("//div[contains(text(),'Round Trip')]/../div")).click();
-		//driver.findElement(By.xpath("//*[@id=\"main-container\"]/div/div[1]/div/div/div[2]/div/div/div[1]/div[1]/div/div[2]/div/../div")).click();
 		
-		WebElement from = driver.findElement(By.xpath("//input[@placeholder='Enter airport code/city']"));
-		from.sendKeys("chennai");
-		driver.findElement(By.xpath("//div[text()='MAA - Chennai, India']")).click();
+		WebElement link = driver.findElement(By.xpath("//div[text()='Round Trip']"));
+	
 		
 		
-		
+		Select s=new Select(link);
+	
+		s.selectByVisibleText("Round Trip");
+	
 	}
 
 }

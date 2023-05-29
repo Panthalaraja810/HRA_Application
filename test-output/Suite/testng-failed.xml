@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
-  <listeners>
-    <listener class-name="com.GenericUtilities.ITransfer"/>
-  </listeners>
-  <test thread-count="1" name="Test(failed)" parallel="tests">
+<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="classes" name="Test(failed)">
     <classes>
-      <class name="Register_Package.Reg_IndHome">
+      <class name="practisepackage.GridPractiseEx1">
         <methods>
-          <include name="regIndHome"/>
-          <include name="configAM"/>
-          <include name="configBM"/>
-          <include name="configAS"/>
-          <include name="configAC"/>
-          <include name="configBS"/>
-          <include name="configBC"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- Register_Package.Reg_IndHome -->
+      </class> <!-- practisepackage.GridPractiseEx1 -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

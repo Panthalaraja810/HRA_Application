@@ -48,7 +48,8 @@ public class PhpTravelsPractise1
 		}
 					
 		for(String link :listofLink)
-			try{
+			{
+			try
 		{
 			URL url = new URL(link);
 			URLConnection urlCon = url.openConnection();
@@ -61,12 +62,12 @@ public class PhpTravelsPractise1
 				brokenLinks.add(link+" ==> StatusCode : "+statusCode+" ==> ResponsMsg : "+responseMsg);
 			}
 		}
-			}
+			
 		catch (Exception e) 
 			{
 			brokenLinks.add(link+" ==> Not connected to server");
 			}
-		
+			}
 		System.out.println(brokenLinks);
 		System.out.println(brokenLinks.size());
 		
